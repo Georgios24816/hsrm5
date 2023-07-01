@@ -1,0 +1,114 @@
+Aufgabe 1:
+
+a)
+
+Chiphertext-only: Der Angreifer kennt, neben dem Verschlüsselungsalgorithmus, nur den plaintext.
+
+Known-plaintext: Der Angreifer besitzt Ciphertext/Plaintext Paare.
+
+Chosen-plaintext: Der Angreifer hat Zugriff auf das Verschlüsselungsgerät und kann mit diesem aus beliebigen Plaintext, Ciphertexte generieren (d.h verschlüsseln). Er hat jedoch keinen Zugang zum Schlüssel.
+
+Chosen-ciphertext: Der Angreifer hat Zugriff auf das Versschlüsselungsgerät und kann mit diesem beliebig   
+Verschlüsseln und Entschlüsseln. Er hat keinen Zugriff auf den Schlüssel.
+
+b)
+
+Die Sicherheit von krptografischen Verfahren darf nur von der Geheimhaltung der Schlüsselabhängig sein, aber nicht von der Geheimhaltung des Verfahrens.
+
+c)
+
+Die Geheimhaltung des Schlüssels. Die Angriffsmodelle aus Aufgabe a) sind, auch im Besitz vieler Chipher- und Plaintextpaaren, wirkungslos. 
+
+
+
+Aufgabe 2:
+
+a)
+
+Vorrausetzung: Jeder Buchstabe kommt im Schlüssel vor => 26 Stellen.
+Der erste Buchtsbabe kann in 26 unterschiedlichen Stellen platziert werden. Der zweite Buchtsabe in 25 Stellen usw. => 26*25*24*23*....*3*2*1 = 26! = 4*10^26. Dies entspricht 88 Bit.
+
+
+Aufgabe 3:
+
+a) <Z, -> Ist keine Gruppe, da das Kommutativgesetz (a - b = b - a) mit dem Minusoperator nicht gilt.
+
+b) <N, +> Ist keine Gruppe, da es keine 0 und damit auch kein neutrales Element bezüglich der Addition gibt.
+
+c) <No, +> Ist keine Gruppe, da es kein inverses Element (a' = -a) gibt. Es existieren in N keine negativen Zahlen.
+
+d) <Z, +> ist eine Gruppe, da es das Assoziativgesetz (a+b = b+a) erfüllt, ein neutrales Element (0) bezüglich der Addition besitzt und es ein additives Inversen (a' = -a) gibt. Sie ist auch eine abelsche Gruppe.
+
+
+
+Aufgabe 4:
+
+a)
+7 und 29 sind teilerfremd, daraus folgt: ggT(29, 7) = 1.
+==> ggT(29, 7) = 1 = s*29 + t*7 = s*7 mod 29 mit den Startwerten r0 = 29 und r1 = 7.
+29 = 4 * 7 + 1
+7  = 7 * 1 + 0
+
+1 = 29 - 4 * 7 = 1 * 29 - 4 * 7 mod 29
+
+(-4 mod 29 = 25) :)
+
+bzw.: a = 7^-1 mod 29
+	 -4 = 7^-1 mod 29
+	 29 - 4 = 25 = 7^-1 mod 29 
+b)
+23 und 29 sind teilerfremd, daraus folgt ggt(29, 23) = 1.
+==> ggT(29, 23) ) = 1 = s*29 + t*23 mit den Startwerten r0 = 29 und r1 = 23.
+29 = 1 * 23 + 6
+23 = 3 * 6  + 5
+6  = 1 * 5  + 1
+5  = 5 * 1  + 0
+
+1 = 6 - 1 * 5
+1 = 6 - 1 * (23 - 3 * 6)
+1 = 6 - 1 * 23 + 3 * 6 = -1 * 23 + 4 * 6 
+1 = -1 * 23 + 4 * (29 - 1 * 23) = -1 * 23 + 4 * 29 - 4 * 23 = -5 * 23 + 4 * 29
+
+-5 mod 29 = 24 
+
+
+c) a = 7^-3 mod 29 = (7^3)^⁻1 mod 29 = (343 mod 29)^-1 mod 29 = 24^-1 mod 29
+
+29 = 1 * 24 + 5
+24 = 4 * 5  + 4
+5 =  1 * 4  + 1
+4 =  4 * 1  + 0
+
+1 = 5 - 1 * 4
+1 = 5 - 1 * (24 - 4 * 5) = 5 - 1 * 24 + 4 * 5 = -1 * 24 + 5 * 5
+1 = -1 * 24 + 5 * (29 - 1 * 24) = -1 * 24 + 5 * 29 - 5 * 24 = 5 * 29 - 6 * 24
+
+-6 mod 29 = 23
+
+
+
+Aufgabe 5)   
+
+c = (K*p)mod n, Ciphertext = c = UHUSQHKX = (20 20 16 10)
+							   				( 7 18  7 23)
+							   
+
+Schlüsselmatrix = K = (-8 -9)							    
+					  (-9 -8)
+
+a)  p = (K^-1 * c)mod n
+
+b) ggT(det(K), N) = 1. Der ggT der Determinante von K und N müssen invertierbar sein.
+					  
+c) det(K) = 9, det(K)^-1 = 9^-1 = det(K)^-1 = 9^-1 mod 26
+
+26 = 2 * 9 + 8
+9  = 1 * 8 + 1
+8  = 8 * 1 + 0
+
+1 = 9 - 1 * 8 
+1 = 9 - 1 * (26 - 2 * 9) = 9 - 1 * 26 + 2 * 9 = -1 * 26 + 3 * 9
+
+3 mod 26 = 3
+
+				  
